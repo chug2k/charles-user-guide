@@ -691,17 +691,12 @@ h1 {
     line-height: 1.6;
 }
 
-.appendix-hogan-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
 .appendix-hogan-card {
     background: var(--bg-elevated);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 1.25rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
     transition: border-color 0.3s ease;
 }
 
@@ -723,21 +718,29 @@ h1 {
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.75rem;
 }
 
 .appendix-hogan-card-header h4 {
     font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text);
 }
 
-/* Score rows */
+.appendix-hogan-about {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.6;
+}
+
+/* Score rows — number on left, label + note on right */
 .appendix-scores {
     display: flex;
     flex-direction: column;
@@ -746,30 +749,45 @@ h1 {
 
 .appendix-score-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.4rem 0.25rem;
-    border-radius: 3px;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 0.65rem 0.5rem;
+    border-radius: 4px;
 }
 
 .appendix-score-row:nth-child(odd) {
     background: rgba(255, 255, 255, 0.015);
 }
 
-.appendix-score-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--text-dim);
-}
-
 .appendix-score-value {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-dim);
     text-align: right;
-    min-width: 30px;
+    min-width: 36px;
+    flex-shrink: 0;
+    line-height: 1.2;
+}
+
+.appendix-score-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.appendix-score-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.appendix-score-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.5;
 }
 
 .appendix-score--extreme { color: var(--lose); }
@@ -841,10 +859,6 @@ footer p {
     }
 
     .appendix-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .appendix-hogan-grid {
         grid-template-columns: 1fr;
     }
 
