@@ -573,39 +573,91 @@ h1 {
 }
 
 .appendix-item {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: var(--bg-elevated);
+    overflow: hidden;
 }
 
-.appendix-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+.appendix-item[open] {
+    border-color: var(--border-accent);
 }
 
 .appendix-title {
     font-family: 'Syne', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 0.75rem;
     letter-spacing: -0.3px;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.appendix-title::-webkit-details-marker {
+    display: none;
+}
+
+.appendix-title::after {
+    content: '+';
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.appendix-item[open] .appendix-title::after {
+    content: '−';
+}
+
+.appendix-title:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.appendix-badge {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.appendix-badge--danger {
+    color: var(--lose);
+    background: var(--lose-dim);
+}
+
+.appendix-detail {
+    padding: 0 1.5rem 1.5rem;
 }
 
 .appendix-about {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-style: italic;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     line-height: 1.7;
 }
 
 .appendix-results {
-    background: var(--bg-elevated);
+    background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 2rem;
+    border-radius: 6px;
+    padding: 1.5rem;
 }
 
 .appendix-results h4 {
