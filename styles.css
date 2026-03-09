@@ -42,6 +42,48 @@ body {
     padding: 0 2rem;
 }
 
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switcher {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 100;
+    display: flex;
+    gap: 0.25rem;
+    background: #1a1a1a;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.2rem;
+}
+
+.lang-link {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    transition: color 0.15s ease, background 0.15s ease;
+}
+
+.lang-link:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-active {
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.lang-meme {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+}
+
 /* ===== HERO ===== */
 .hero {
     padding: 8rem 0 4rem;
