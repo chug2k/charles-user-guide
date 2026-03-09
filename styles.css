@@ -206,6 +206,19 @@ h1 {
     color: var(--bg);
 }
 
+.subsection-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
 /* ===== CALLOUT ===== */
 .callout {
     background: var(--bg-elevated);
