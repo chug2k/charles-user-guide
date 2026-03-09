@@ -557,6 +557,137 @@ h1 {
     background: var(--accent);
 }
 
+/* ===== APPENDIX ===== */
+.appendix {
+    border-bottom: none;
+}
+
+.appendix .section-heading {
+    margin-bottom: 1rem;
+}
+
+.appendix-intro {
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.appendix-item {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.appendix-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.appendix-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.3px;
+}
+
+.appendix-about {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.appendix-results {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.appendix-results h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+}
+
+.appendix-results p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.appendix-results p:last-child {
+    margin-bottom: 0;
+}
+
+.appendix-results p strong {
+    color: var(--text);
+}
+
+.appendix-scores {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.appendix-score-row {
+    display: grid;
+    grid-template-columns: 180px 50px 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.appendix-score-row:last-child {
+    border-bottom: none;
+}
+
+.appendix-score-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.appendix-score-value {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-align: right;
+}
+
+.appendix-score--extreme {
+    color: var(--lose);
+}
+
+.appendix-score--danger {
+    color: var(--lose);
+}
+
+.appendix-score--high {
+    color: var(--accent);
+}
+
+.appendix-score--low {
+    color: var(--text-muted);
+}
+
+.appendix-score-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
 /* ===== FOOTER ===== */
 footer {
     padding: 4rem 0;
@@ -618,6 +749,15 @@ footer p {
     .brain-bar-label {
         width: 80px;
         font-size: 0.65rem;
+    }
+
+    .appendix-score-row {
+        grid-template-columns: 140px 40px 1fr;
+        gap: 0.75rem;
+    }
+
+    .appendix-score-label {
+        font-size: 0.7rem;
     }
 
     .section-stress {
