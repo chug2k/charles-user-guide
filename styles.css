@@ -568,72 +568,62 @@ h1 {
 
 .appendix-intro {
     color: var(--text-dim);
-    margin-bottom: 3rem;
-    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
 }
 
-.appendix-item {
+/* Profile summary cards */
+.appendix-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.appendix-card {
+    background: var(--bg-elevated);
     border: 1px solid var(--border);
     border-radius: 8px;
-    margin-bottom: 1rem;
-    background: var(--bg-elevated);
-    overflow: hidden;
+    padding: 1.5rem;
+    transition: border-color 0.3s ease;
 }
 
-.appendix-item[open] {
-    border-color: var(--border-accent);
+.appendix-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
 }
 
-.appendix-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.3px;
-    padding: 1.25rem 1.5rem;
-    cursor: pointer;
+.appendix-card--wide {
+    grid-column: 1 / -1;
+}
+
+.appendix-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    list-style: none;
-    user-select: none;
-    transition: background 0.2s ease;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
-.appendix-title::-webkit-details-marker {
-    display: none;
-}
-
-.appendix-title::after {
-    content: '+';
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--text-muted);
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-}
-
-.appendix-item[open] .appendix-title::after {
-    content: '−';
-}
-
-.appendix-title:hover {
-    background: rgba(255, 255, 255, 0.03);
+.appendix-card-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.2px;
 }
 
 .appendix-badge {
     font-family: 'Syne', sans-serif;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: var(--accent);
     background: var(--accent-dim);
-    padding: 0.3rem 0.75rem;
-    border-radius: 4px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .appendix-badge--danger {
@@ -641,50 +631,113 @@ h1 {
     background: var(--lose-dim);
 }
 
-.appendix-detail {
-    padding: 0 1.5rem 1.5rem;
+.appendix-card-about {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
 }
 
-.appendix-about {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    font-style: italic;
-    margin-bottom: 1.25rem;
+.appendix-card-result p {
+    color: var(--text-dim);
+    font-size: 0.8rem;
     line-height: 1.7;
 }
 
-.appendix-results {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.5rem;
+.appendix-card-result p strong {
+    color: var(--text);
 }
 
-.appendix-results h4 {
+.emergenetics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.emergenetics-grid h4 {
     font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent);
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.appendix-results p {
+.emergenetics-grid p {
     color: var(--text-dim);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
     line-height: 1.7;
 }
 
-.appendix-results p:last-child {
-    margin-bottom: 0;
+/* Hogan section */
+.appendix-subheading {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
 }
 
-.appendix-results p strong {
+.appendix-hogan-intro {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.appendix-hogan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.appendix-hogan-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    transition: border-color 0.3s ease;
+}
+
+.appendix-hogan-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.appendix-hogan-card--danger {
+    border-color: rgba(196, 92, 74, 0.2);
+    background: rgba(17, 10, 10, 0.6);
+}
+
+.appendix-hogan-card--danger:hover {
+    border-color: rgba(196, 92, 74, 0.35);
+}
+
+.appendix-hogan-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.appendix-hogan-card-header h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: var(--text);
 }
 
+/* Score rows */
 .appendix-scores {
     display: flex;
     flex-direction: column;
@@ -692,53 +745,37 @@ h1 {
 }
 
 .appendix-score-row {
-    display: grid;
-    grid-template-columns: 180px 50px 1fr;
+    display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    justify-content: space-between;
+    padding: 0.4rem 0.25rem;
+    border-radius: 3px;
 }
 
-.appendix-score-row:last-child {
-    border-bottom: none;
+.appendix-score-row:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.015);
 }
 
 .appendix-score-label {
     font-family: 'Syne', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    color: var(--text);
+    color: var(--text-dim);
 }
 
 .appendix-score-value {
     font-family: 'Source Serif 4', Georgia, serif;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-dim);
     text-align: right;
+    min-width: 30px;
 }
 
-.appendix-score--extreme {
-    color: var(--lose);
-}
-
-.appendix-score--danger {
-    color: var(--lose);
-}
-
-.appendix-score--high {
-    color: var(--accent);
-}
-
-.appendix-score--low {
-    color: var(--text-muted);
-}
-
-.appendix-score-note {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
+.appendix-score--extreme { color: var(--lose); }
+.appendix-score--danger { color: var(--lose); }
+.appendix-score--high { color: var(--accent); }
+.appendix-score--low { color: var(--text-muted); }
 
 /* ===== FOOTER ===== */
 footer {
@@ -803,13 +840,16 @@ footer p {
         font-size: 0.65rem;
     }
 
-    .appendix-score-row {
-        grid-template-columns: 140px 40px 1fr;
-        gap: 0.75rem;
+    .appendix-cards {
+        grid-template-columns: 1fr;
     }
 
-    .appendix-score-label {
-        font-size: 0.7rem;
+    .appendix-hogan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emergenetics-grid {
+        grid-template-columns: 1fr;
     }
 
     .section-stress {
